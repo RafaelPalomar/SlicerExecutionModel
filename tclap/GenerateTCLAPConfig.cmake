@@ -14,7 +14,7 @@ set(TCLAP_USE_FILE_CONFIG ${TCLAP_BINARY_DIR}/UseTCLAP.cmake)
 
 # Configure TCLAPConfig.cmake for the install tree.
 configure_file(${TCLAP_SOURCE_DIR}/TCLAPConfig.cmake.in
-               ${TCLAP_BINARY_DIR}/TCLAPConfig.cmake @ONLY)
+              ${TCLAP_BINARY_DIR}/TCLAPConfig.cmake @ONLY)
 
 
 
@@ -24,5 +24,5 @@ configure_file(${TCLAP_SOURCE_DIR}/TCLAPConfig.cmake.in
 
 
 # TODO- Configure TCLAPInstallConfig.cmake for the install tree.
-#configure_file(${TCLAP_SOURCE_DIR}/TCLAPInstallConfig.cmake.in
-#               ${TCLAP_BINARY_DIR}/install/TCLAPConfig.cmake @ONLY)
+configure_file(${TCLAP_SOURCE_DIR}/TCLAPInstallConfig.cmake.in
+               ${TCLAP_BINARY_DIR}/install/TCLAPConfig.cmake @ONLY)
