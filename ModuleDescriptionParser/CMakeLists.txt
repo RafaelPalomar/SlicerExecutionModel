@@ -235,7 +235,7 @@ if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
   install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/UseModuleDescriptionParser.cmake
     ${CMAKE_CURRENT_BINARY_DIR}/install/ModuleDescriptionParserConfig.cmake
-    DESTINATION lib64/${lib_name} COMPONENT Development)
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${lib_name} COMPONENT Development)
 endif()
 
 # --------------------------------------------------------------------------
