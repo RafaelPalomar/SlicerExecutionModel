@@ -139,13 +139,13 @@ endif()
 # Install support files
 # --------------------------------------------------------------------------
 if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
-  install(FILES ${GenerateCLP_BINARY_DIR}/GenerateCLPConfig.cmake_install
-    DESTINATION lib/GenerateCLP
+  install(FILES ${GenerateCLP_BINARY_DIR}/GenerateCLPConfig.cmake
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${PROJECT_NAME}
     COMPONENT Development
     RENAME GenerateCLPConfig.cmake
     )
-  install(FILES ${GenerateCLP_BINARY_DIR}/UseGenerateCLP.cmake_install
-    DESTINATION lib/GenerateCLP
+  install(FILES ${GenerateCLP_BINARY_DIR}/UseGenerateCLP.cmake
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${PROJECT_NAME}
     COMPONENT Development
     RENAME UseGenerateCLP.cmake
     )
@@ -234,6 +234,15 @@ configure_file(
   @ONLY
   )
 include(GenerateGenerateCLPConfig.cmake)
+
+# --------------------------------------------------------------------------
+# Install support files
+# --------------------------------------------------------------------------
+if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
+  install(FILES
+    ${GenerateCLP_BINARY_DIR}/install/GenerateCLPConfig.cmake
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${lib_name} COMPONENT Development)
+endif()
 
 # --------------------------------------------------------------------------
 # Testing

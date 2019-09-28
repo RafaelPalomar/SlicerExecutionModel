@@ -19,4 +19,6 @@ set(GenerateCLP_CONFIG_DIR "${GenerateCLP_BINARY_DIR}")
 set(ITK_DIR_CONFIG ${ITK_DIR})
 configure_file(${GenerateCLP_SOURCE_DIR}/GenerateCLPConfig.cmake.in
   ${GenerateCLP_BINARY_DIR}/GenerateCLPConfig.cmake @ONLY)
+configure_file(${GenerateCLP_SOURCE_DIR}/GenerateCLPInstallConfig.cmake.in
+  ${GenerateCLP_BINARY_DIR}/install/GenerateInstallCLPConfig.cmake @ONLY)
 
