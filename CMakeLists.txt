@@ -15,6 +15,8 @@ project(SlicerExecutionModel CXX)
 
 #-----------------------------------------------------------------------------
 
+
+
 include(CMakeDependentOption)
 
 set(CMAKE_MODULE_PATH ${SlicerExecutionModel_SOURCE_DIR}/CMake ${CMAKE_MODULE_PATH})
@@ -215,3 +217,29 @@ foreach(SCRIPT ${allscripts})
   configure_file(${SCRIPT}
     ${CMAKE_CURRENT_BINARY_DIR}/CMake/${_fileName} COPYONLY IMMEDIATE)
 endforeach()
+
+# --------------------------------------------------------------------------
+# Install support files
+# --------------------------------------------------------------------------
+if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/install/SlicerExecutionModelConfig.cmake
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}
+    COMPONENT Development
+    RENAME SlicerExecutionModelConfig.cmake
+    )
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/UseSlicerExecutionModel.cmake
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}
+    COMPONENT Development
+    RENAME UseSlicerExecutionModel.cmake
+    )
+endif()
+
+foreach(SCRIPT ${allscripts})
+  get_filename_component(_fileName ${SCRIPT} NAME)
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/CMake/${_fileName}
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/CMake
+    COMPONENT Development
+    )
+endforeach()
+
+

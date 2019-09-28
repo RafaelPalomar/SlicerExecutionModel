@@ -62,8 +62,8 @@ configure_file(
 
 # TODO - Configure SlicerExecutionModelConfig.cmake for the install tree.
 #
-#configure_file(
-#  ${SlicerExecutionModel_SOURCE_DIR}/SlicerExecutionModelInstallConfig.cmake.in
-#  ${SlicerExecutionModel_BINARY_DIR}/install/SlicerExecutionModelConfig.cmake
-#  @ONLY
-#  )
+configure_file(
+  ${SlicerExecutionModel_SOURCE_DIR}/SlicerExecutionModelInstallConfig.cmake.in
+  ${SlicerExecutionModel_BINARY_DIR}/install/SlicerExecutionModelConfig.cmake
+  @ONLY
+  )
