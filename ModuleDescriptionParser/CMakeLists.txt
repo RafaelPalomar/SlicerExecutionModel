@@ -212,7 +212,7 @@ if(NOT DEFINED ${PROJECT_NAME}_INSTALL_BIN_DIR)
 endif()
 
 if(NOT DEFINED ${PROJECT_NAME}_INSTALL_LIB_DIR)
-  set(${PROJECT_NAME}_INSTALL_LIB_DIR lib/${PROJECT_NAME})
+  set(${PROJECT_NAME}_INSTALL_LIB_DIR lib64/${PROJECT_NAME})
 endif()
 
 install(TARGETS ${lib_name}
@@ -235,7 +235,7 @@ if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
   install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/UseModuleDescriptionParser.cmake
     ${CMAKE_CURRENT_BINARY_DIR}/install/ModuleDescriptionParserConfig.cmake
-    DESTINATION lib/${lib_name} COMPONENT Development)
+    DESTINATION lib64/${lib_name} COMPONENT Development)
 endif()
 
 # --------------------------------------------------------------------------
