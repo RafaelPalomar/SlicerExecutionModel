@@ -240,7 +240,7 @@ include(GenerateGenerateCLPConfig.cmake)
 # --------------------------------------------------------------------------
 if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
   install(FILES
-    ${GenerateCLP_BINARY_DIR}/install/GenerateCLPConfig.cmake
+    ${GenerateCLP_BINARY_DIR}/install/GenerateInstallCLPConfig.cmake
     DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${lib_name} COMPONENT Development)
 endif()
 
