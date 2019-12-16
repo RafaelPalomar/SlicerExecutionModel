@@ -7,10 +7,10 @@ get_filename_component(ModuleDescriptionParser_CONFIG_DIR
 
 #
 set(ModuleDescriptionParser_INCLUDE_DIRS
-  "${ModuleDescriptionParser_CONFIG_DIR}/../../include/ModuleDescriptionParser"
+  "${ModuleDescriptionParser_CONFIG_DIR}/../../../include/ModuleDescriptionParser"
   )
 set(ModuleDescriptionParser_LIBRARY_DIRS
-  "${ModuleDescriptionParser_CONFIG_DIR}"
+  "${ModuleDescriptionParser_CONFIG_DIR}/../"
   )
 set(ModuleDescriptionParser_USE_FILE
   "${ModuleDescriptionParser_CONFIG_DIR}/UseModuleDescriptionParser.cmake"
