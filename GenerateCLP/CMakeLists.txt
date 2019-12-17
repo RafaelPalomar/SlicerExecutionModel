@@ -162,11 +162,11 @@ set(GenerateCLP_FORWARD_PATH_BUILD " \\
 set(GenerateCLP_FORWARD_PATH_INSTALL " \\
    \".\", \\
    \"${ITK_DIR}/bin\", \\
-   ${json_forward_path_install} \\
-   \"${ModuleDescriptionParser_DIR}/bin\" \\
+   \"${json_forward_path_install}\", \\
+   \"${SlicerExecutionModel_CONFIG_DIR}\" \\
 ")
 set(GenerateCLP_FORWARD_EXE GenerateCLP)
-set(GenerateCLP_FORWARD_DIR_INSTALL "..")
+set(GenerateCLP_FORWARD_DIR_INSTALL "./")
 
 # --------------------------------------------------------------------------
 # Build launcher
@@ -242,7 +242,7 @@ if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
   install(FILES
     ${GenerateCLP_BINARY_DIR}/bin/GenerateCLP
     ${GenerateCLP_BINARY_DIR}/bin/GenerateCLPLauncher
-    DESTINATION bin
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${PROJECT_NAME}/bin
     COMPONENT Runtime
     )
 
