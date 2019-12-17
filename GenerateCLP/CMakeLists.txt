@@ -232,8 +232,21 @@ if(NOT ${PROJECT_NAME}_INSTALL_NO_DEVELOPMENT)
   install(FILES ${GenerateCLP_BINARY_DIR}/UseGenerateCLP.cmake
     DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${PROJECT_NAME}
     COMPONENT Development
-    RENAME UseGenerateCLP.cmake
     )
+
+  install(FILES ${GenerateCLP_BINARY_DIR}/GenerateCLP.cmake
+    DESTINATION ${SlicerExecutionModel_INSTALL_LIB_DIR}/${PROJECT_NAME}
+    COMPONENT Development
+    )
+
+  install(FILES
+    ${GenerateCLP_BINARY_DIR}/bin/GenerateCLP
+    ${GenerateCLP_BINARY_DIR}/bin/GenerateCLPLauncher
+    DESTINATION bin
+    COMPONENT Runtime
+    )
+
+
 endif()
 
 # --------------------------------------------------------------------------
