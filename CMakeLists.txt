@@ -130,7 +130,7 @@ endif()
 #-----------------------------------------------------------------------------
 if(NOT DEFINED SlicerExecutionModel_DEFAULT_CLI_LIBRARY_WRAPPER_CXX)
   set(SlicerExecutionModel_DEFAULT_CLI_LIBRARY_WRAPPER_CXX
-    ${CMAKE_CURRENT_SOURCE_DIR}/CMake/SEMCommandLineLibraryWrapper.cxx)
+    ${SlicerExecutionModel_INSTALL_LIB_DIR}/CMake/SEMCommandLineLibraryWrapper.cxx)
 endif()
 
 #-----------------------------------------------------------------------------
