@@ -158,6 +158,7 @@ macro(SEMMacroBuildCLI)
 
   add_executable(${CLP} ${LOCAL_SEM_CLI_LIBRARY_WRAPPER_CXX})
   set_target_properties(${CLP} PROPERTIES COMPILE_FLAGS "${cli_executable_compile_flags}")
+    set_target_properties(${CLP} PROPERTIES INSTALL_RPATH "${LOCAL_SEM_INSTALL_RUNTIME_DESTINATION}")
   set(cli_executable_libraries ${CLP}Lib)
   if(DEFINED SlicerExecutionModel_EXTRA_EXECUTABLE_TARGET_LIBRARIES)
     list(APPEND cli_executable_libraries ${SlicerExecutionModel_EXTRA_EXECUTABLE_TARGET_LIBRARIES})
